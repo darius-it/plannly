@@ -1,0 +1,17 @@
+/* Set the background color of the page to light blue */
+body {
+  background-color: lightblue;
+}
+
+/* Style the header */
+h1 {
+  color: white;
+  background-color: navy;
+  padding: 20px;
+}
+
+/* Style the links */
+a {
+  color: dodgerblue;
+  text-decoration: none;
+}
