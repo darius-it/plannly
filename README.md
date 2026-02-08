@@ -2,7 +2,7 @@
 
 Plannly is a planner and notes web application. It lets you organize thoughts as bullet points inside lists, manage a daily list for every calendar day, and store everything in a SQL database so your data is available anywhere with an internet connection. The UI is built with Vaadin 24 and the backend with Spring Boot.
 
-This project was built together with Matej Minar and Tim Kagerbauer as part of course work. More details (in German) can be found in the `sw-eng` folder.
+This project was built around 2023, together with Matej Minar and Tim Kagerbauer as part of course work. More details (in German) can be found in the `sw-eng` folder.
 
 ## Highlights
 
