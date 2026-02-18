@@ -38,14 +38,10 @@ public class AuthService {
         if(checkIfUserExists(user.getUsername())){
             throw new Exception("User already exists with this username");
         }
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        System.out.printf("%s %s %s%n", user.getUsername(), user.getEmail(), user.getPassword());
 
         UserEntity userEntity = new UserEntity();
         BeanUtils.copyProperties(user, userEntity); // zunächst alle Daten auf neues Objekt übertragen
         encodePassword(userEntity, user); // neues Objekt trägt Passwort nicht mehr im Klartext sondern codiert
-        userEntity.setUsername("trobo");
-        userEntity.setEmail("pog@gmail.com");
 
         userRepository.save(userEntity); // neues Objekt wird in Datenbank gespeichert
         System.out.println("User registration succeeded, saved in database");
