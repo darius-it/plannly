@@ -17,6 +17,8 @@ import java.util.stream.Stream;
  */
 public class RegistrationForm extends FormLayout {
 
+    private TextField username;
+    private EmailField email;
     private PasswordField password;
     private PasswordField passwordConfirm;
 
@@ -30,8 +32,8 @@ public class RegistrationForm extends FormLayout {
      */
     public RegistrationForm() {
         H1 title = new H1("Create an account");
-        TextField username = new TextField("Username");
-        EmailField email = new EmailField("Email");
+        username = new TextField("Username");
+        email = new EmailField("Email");
 
         password = new PasswordField("Password");
         passwordConfirm = new PasswordField("Confirm password");

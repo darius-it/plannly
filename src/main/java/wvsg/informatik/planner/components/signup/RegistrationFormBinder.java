@@ -44,7 +44,7 @@ public class RegistrationFormBinder {
         // dass der Binder den Passwort-Validator erneut überprüft, wenn sich der Wert des Feldes ändert.
         // Der einfachste Weg ist, das manuell zu tun.
         registrationForm.getPasswordConfirmField().addValueChangeListener(e -> {
-            // Der Benutzer hat das zweite Feld geändert, jetzt können wir validieren und Fehler anzeigen.
+            // Der Benutzer hat das Feld noch nicht besucht, daher noch keine Validierung, sondern erst beim nächsten Mal.
             // Siehe passwordValidator() für die Verwendung dieser Flag.
             enablePasswordValidation = true;
 
@@ -106,12 +106,11 @@ public class RegistrationFormBinder {
      * Diese Methode wird aufgerufen, wenn die anfängliche Formularvalidierung erfolgreich war.
      */
     private void initialValidationSuccess(UserEntity userBean) {
-        System.out.printf("%s %s %s POG!!!!!!!!!!! %n", userBean.getUsername(), userBean.getEmail(), userBean.getPassword());
-
         try {
             authService.registerUser(userBean);
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            registrationForm.getErrorMessageField().setText(e.getMessage());
+            return;
         }
 
         Notification notification =
