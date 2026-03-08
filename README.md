@@ -4,6 +4,9 @@ Plannly is a planner and notes web application. It lets you organize thoughts as
 
 This project was built around 2023, together with Matej Minar and Tim Kagerbauer as part of course work. More details (in German) can be found in the `sw-eng` folder.
 
+Screenshot of the app:
+<img width="1560" height="842" alt="image" src="https://github.com/user-attachments/assets/e5bfceba-becd-4af6-93e2-157e324cc222" />
+
 ## Highlights
 
 - Accounts: users can register and log in; credentials are stored server-side.
